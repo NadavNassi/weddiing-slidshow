@@ -1,30 +1,31 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Router, Route, Routes } from 'react-router-dom'
 import { Provider } from "react-redux"
 import { store } from './store/store';
 
 
 import './style/style.scss'
 import { routes } from './routes';
+import { UploadIImg } from './pages/upload-img';
+import SlideShow from './pages/slideshow';
 
 function App() {
   return (
     <div className="App flex column">
-      <Provider store={store}>
-        <Router>
-          <main>
-            <Routes>
-              {routes.map(route => (
-                <Route
-                  key={route.path}
-                  exact
-                  element={route.element}
-                  path={route.path}
-                />
-              ))}
-            </Routes>
-          </main>
-        </Router>
-      </Provider>
+      <BrowserRouter>
+        <Provider store={store}>
+            <main>
+              <Routes>
+                {routes.map(route => (
+                  <Route
+                    key={route.path}
+                    element={route.element}
+                    path={route.path}
+                  />
+                ))}
+              </Routes>
+            </main>
+        </Provider>
+      </BrowserRouter>
     </div>
   );
 }

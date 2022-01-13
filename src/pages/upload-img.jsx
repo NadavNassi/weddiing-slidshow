@@ -15,7 +15,7 @@ export const UploadIImg = () => {
         const url = await uploadImg(file)
         setModal(true)
         setFile(null)
-        socketService.emit('new-img', url)
+        // socketService.emit('new-img', url)
         console.log("🚀 ~ file: upload-img.jsx ~ line 10 ~ UploadIImg ~ isModalOpen", isModalOpen)
     }
     return (
