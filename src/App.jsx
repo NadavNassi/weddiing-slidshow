@@ -1,11 +1,10 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes, Switch } from 'react-router-dom'
 import { Provider } from "react-redux"
 import { store } from './store/store';
 
 
 import './style/style.scss'
 import { routes } from './routes';
-
 function App() {
   return (
     <div className="App flex column">
@@ -17,7 +16,7 @@ function App() {
                 <Route
                   key={route.path}
                   exact
-                  element={route.element}
+                  component={route.comoponent}
                   path={route.path}
                 />
               ))}

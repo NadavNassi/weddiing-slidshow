@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { uploadImg } from '../services/cloudinary.service'
 import { ThankModal } from '../cmps/thank-modal'
+import { socketService } from '../services/socket.service'
 
 export const UploadIImg = () => {
     const [file, setFile] = useState(null)
     const [isModalOpen, setModal] = useState(false)
-    //imgs [{url: '', isSelected: false}]
-    useEffect(() => {
-        console.log(file);
-    }, [file])
     const onSubmit = async () => {
         if (!file) return
-        console.log("🚀 ~ file: upload-img.jsx ~ line 10 ~ UploadIImg ~ isModalOpen", isModalOpen)
         const url = await uploadImg(file)
         setModal(true)
         setFile(null)
-        socketService.emit('new-img', url)
-        console.log("🚀 ~ file: upload-img.jsx ~ line 10 ~ UploadIImg ~ isModalOpen", isModalOpen)
+        // socketService.emit('new-img', url)
     }
     return (
         <section className="upload-img">
