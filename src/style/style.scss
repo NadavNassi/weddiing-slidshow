@@ -1,0 +1,15 @@
+//Setup
+@import "setup/reset.scss";
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/typography";
+
+//Basic
+@import "basics/helpers";
+@import "basics/basics";
+
+// Cmps
+@import "cmps/header";
+@import "cmps/cannabis-app";
+@import "cmps/cannabis-details";

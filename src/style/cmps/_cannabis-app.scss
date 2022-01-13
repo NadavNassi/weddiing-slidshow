@@ -1,0 +1,18 @@
+.cannabis-app {
+    display: grid;
+    grid-template-columns: 1fr 75vw 1fr;
+    margin-bottom: rem(15px);
+    > * {
+        grid-column: 2;
+    }
+    .cannabis-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: rem(15px);
+        .cannabis-preview {
+            height: 100%;
+            box-shadow: 0 0 2px 0;
+            cursor: pointer;
+        }
+    }
+}
