@@ -16,6 +16,7 @@ export const UploadIImg = () => {
         // const url = await uploadImg(file)
         // dispatch({ type: 'ADD_IMG', img: url })
         setModal(true)
+        setFile(null)
         console.log("🚀 ~ file: upload-img.jsx ~ line 10 ~ UploadIImg ~ isModalOpen", isModalOpen)
     }
     return (
