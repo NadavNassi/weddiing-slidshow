@@ -35,7 +35,7 @@
     // grid-auto-rows: 300px;
 
     > * {
-        max-width: 100%;
+        width: 100%;
         @include aspect-ratio(1, 1);
     }
 }
