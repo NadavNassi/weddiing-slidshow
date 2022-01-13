@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
 import { uploadImg } from '../services/cloudinary.service'
 import { ThankModal } from '../cmps/thank-modal'
 
 export const UploadIImg = () => {
-    const dispatch = useDispatch()
     const [file, setFile] = useState(null)
     const [isModalOpen, setModal] = useState(false)
+    //imgs [{url: '', isSelected: false}]
     useEffect(() => {
         console.log(file);
     }, [file])
     const onSubmit = async () => {
         if (!file) return
         console.log("🚀 ~ file: upload-img.jsx ~ line 10 ~ UploadIImg ~ isModalOpen", isModalOpen)
-        // const url = await uploadImg(file)
-        // dispatch({ type: 'ADD_IMG', img: url })
+        const url = await uploadImg(file)
         setModal(true)
         setFile(null)
+        socketService.emit('new-img', url)
         console.log("🚀 ~ file: upload-img.jsx ~ line 10 ~ UploadIImg ~ isModalOpen", isModalOpen)
     }
     return (
