@@ -1,14 +1,14 @@
 import { SelectImgs } from './pages/select-imgs'
-import { UploadIImg } from './pages/upload-img'
+import { UploadImg } from './pages/upload-img'
 
 
 export const routes = [
     {
         path: '/select',
-        comoponent: SelectImgs
+        element: <SelectImgs />
     },
     {
         path: '/',
-        comoponent: UploadIImg,
+        element: <UploadImg />,
     },
 ]

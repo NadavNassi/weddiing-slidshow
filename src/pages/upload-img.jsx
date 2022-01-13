@@ -3,7 +3,7 @@ import { uploadImg } from '../services/cloudinary.service'
 import { ThankModal } from '../cmps/thank-modal'
 import { socketService } from '../services/socket.service'
 
-export const UploadIImg = () => {
+export const UploadImg = () => {
     const [file, setFile] = useState(null)
     const [isModalOpen, setModal] = useState(false)
     const onSubmit = async () => {

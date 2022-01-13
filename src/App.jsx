@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Routes, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import { Provider } from "react-redux"
 import { store } from './store/store';
 
@@ -16,7 +16,7 @@ function App() {
                 <Route
                   key={route.path}
                   exact
-                  component={route.comoponent}
+                  element={route.element}
                   path={route.path}
                 />
               ))}
