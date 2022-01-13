@@ -9,9 +9,9 @@ export const UploadImg = () => {
     const onSubmit = async () => {
         if (!file) return
         const url = await uploadImg(file)
-        setModal(true)
         setFile(null)
-        // socketService.emit('new-img', url)
+        setModal(true)
+        socketService.emit('new-img', url)
     }
     return (
         <section className="upload-img">

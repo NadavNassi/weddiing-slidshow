@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { ImgList } from "../cmps/imgs-list"
 import { imgsService } from "../services/imgs.service"
 import { socketService } from "../services/socket.service"
 
@@ -17,6 +18,8 @@ export const SelectImgs = () => {
         setImgs(prevImgs => [...prevImgs, url])
     }
     return (
-        <h1>Select page</h1>
+        <section className="select-imgs main-container">
+            <ImgList imgs={imgs} />
+        </section>
     )
 }

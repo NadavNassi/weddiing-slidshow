@@ -9,7 +9,7 @@ const imgs = [
     {
         _id: 'i102',
         url: 'https://res.cloudinary.com/triplen91/image/upload/v1623314271/qafio7fn6d3rskorynad.jpg',
-        isSelected: false
+        isSelected: true
     },
     {
         _id: 'i103',
