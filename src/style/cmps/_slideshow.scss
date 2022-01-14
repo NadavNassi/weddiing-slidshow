@@ -1,0 +1,33 @@
+.slide-screen {
+    width: 200vw;
+    height: 100vh;
+    transition: 2.5s;
+    &.slidein {
+        margin-left: -100vw;
+    }
+}
+
+.boxImg {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        animation-duration: 14s;
+        animation-name: zoomanimation;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+
+@keyframes zoomanimation {
+    from {
+        transform:scale(0.8) rotate(-3deg);
+    }
+    to {
+        transform:scale(1) rotate(3deg);
+    }
+}
