@@ -1,10 +1,16 @@
-import { UploadIImg } from './pages/upload-img'
-import SlideShow from './pages/slideshow'
+import { SelectImgs } from './pages/select-imgs'
+import { UploadImg } from './pages/upload-img'
+
+import { SlideShow } from './pages/slideshow'
 
 export const routes = [
     {
+        path: '/select',
+        element: <SelectImgs />
+    },
+    {
         path: '/',
-        element: <UploadIImg />,
+        element: <UploadImg />,
     },
     {
         path: '/slideshow',

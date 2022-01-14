@@ -4,11 +4,13 @@
 @import "setup/functions";
 @import "setup/mixins";
 @import "setup/typography";
+@import "basics/layout";
 
 //Basic
 @import "basics/helpers";
 @import "basics/basics";
 
 // Cmps
-@import "cmps/_upload-img";
+@import "cmps/upload-img";
 @import "cmps/thank-modal";
+@import "cmps/img-prev";
